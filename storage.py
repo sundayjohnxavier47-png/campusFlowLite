@@ -12,6 +12,6 @@ def load_tickets():
     except json.JSONDecodeError:
         return []
 
-def save_tickets():
+def save_tickets(tickets):
     with open(FILE, "w") as f:
         json.dump(tickets, f, indent=2)
