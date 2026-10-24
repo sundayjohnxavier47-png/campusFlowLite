@@ -6,8 +6,8 @@ def create_ticket():
     tickets = load_tickets()
     ticket = {
         "id": max((t["id"] for t in tickets), default=0) + 1,
-        "title": get_input("Title: ")
-        "description": get_input("Description: ")
+        "title": get_input("Title: "),
+        "description": get_input("Description: "),
     }
     tickets.append(ticket)
     save_tickets(tickets)
